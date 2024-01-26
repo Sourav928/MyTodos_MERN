@@ -16,7 +16,6 @@ server/package-lock.json
 
 # misc
 server/.env
-
 server/vercel.json
 .DS_Store
 .env.local
