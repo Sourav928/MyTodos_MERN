@@ -1,57 +1,73 @@
-import { useState } from "react";
-
-import { toggleTodo, updateTodo } from "../redux/actions";
-import { deleteTodo } from "../redux/actions";
+import { toggleTodo, deleteTodo } from "../redux/actions";
+import Button from "@mui/material/Button";
 
 import { useDispatch } from "react-redux";
 
 const Todo = ({ todo }) => {
+  const dispatch = useDispatch();
 
-    const [editing, setEditing] = useState(false);
-    const [text, setText] = useState(todo?.data);
-
-    const dispatch = useDispatch();
-
-    const onFormSubmit = (e) => {
-        e.preventDefault();
-
-        setEditing(prevState => !prevState);
-
-        dispatch(updateTodo(todo._id, text))
-    }
-
-    return (
-        <li
-            className="task"
+  return (
+    <li className="task">
+      <div className="task-inside">
+        <div className="task-core">
+          {}
+          <h1
+            style={{
+              textDecoration: todo?.done ? "line-through" : "",
+              color: todo?.done ? "#bdc3c7" : "#fd9814",
+            }}
+          >
+            {todo.name}
+          </h1>
+          <p
+            style={{
+              textDecoration: todo?.done ? "line-through" : "",
+              color: todo?.done ? "#bdc3c7" : "#dddd",
+              margin: "0px",
+            }}
+          >
+            {todo.description}
+          </p>
+        </div>
+        <div className="task-core">
+          <Button
+            variant="outlined"
+            color="info"
             onClick={() => dispatch(toggleTodo(todo._id))}
             style={{
-                textDecoration: todo?.done ? 'line-through' : '',
-                color: todo?.done ? '#bdc3c7' : '#34495e'
+              fontFamily: "Rubik",
+              color: "#2196f3",
+              borderColor: "#2196f3",
+              backgroundColor: "#fff",
+              borderRadius: "50px",
+              margin: "5px",
+              padding: "5px",
+              display: todo?.done ? "none" : "inline",
+              fontSize: "12px",
             }}
-            data-testid="todo-test"
-        >
-            <span style={{ display: editing ? 'none' : '' }}>{todo?.data}</span>
-
-            <form
-                style={{ display: editing ? 'inline' : 'none' }}
-                onSubmit={onFormSubmit}
-            >
-                <input
-                    type="text"
-                    value={text}
-                    className="edit-todo"
-                    onChange={(e) => setText(e.target.value)}
-                />
-            </form>
-
-            <span className="icon" onClick={() => dispatch(deleteTodo(todo._id))}>
-                <i className="fas fa-trash" />
-            </span>
-            <span className="icon" onClick={() => setEditing(prevState => !prevState)}>
-                <i className="fas fa-pen" />
-            </span>
-        </li>
-    )
-}
+          >
+            Complete
+          </Button>
+          <Button
+            variant="outlined"
+            style={{
+              fontFamily: "Rubik",
+              color: "rgb(245 7 0)",
+              borderColor: "rgb(245 7 0)",
+              backgroundColor: "#fff",
+              borderRadius: "50px",
+              margin: "5px",
+              padding: "5px",
+              fontSize: "12px",
+            }}
+            onClick={() => dispatch(deleteTodo(todo._id))}
+          >
+            Delete
+          </Button>
+        </div>
+      </div>
+    </li>
+  );
+};
 
 export default Todo;

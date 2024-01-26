@@ -5,12 +5,14 @@ client/node_modules
 server/node_modules
 /.pnp
 .pnp.js
-
+server/vercel.json     
 # testing
 /coverage
 
 # production
 /build
+client/package-lock.json
+server/package-lock.json
 
 # misc
 server/.env

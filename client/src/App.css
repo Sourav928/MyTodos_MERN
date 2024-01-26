@@ -1,8 +1,13 @@
-
-
 body {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
+  background-color: #2222;
+  font-family: "Rubik", sans-serif;
+}
+
+.main-box {
+  background-color: #303030;
+  border-radius: 20px;
 }
 
 header {
@@ -10,73 +15,103 @@ header {
 }
 
 header h1 {
-  font-size: 100px;
-  color: #2c3e50;
-  font-weight: 200;
+  padding-top: 20px;
+  font-size: 30px;
+  color: #b7b7b7;
+  font-weight: 400;
 }
 
-input {
+.form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  border-radius: 4px;
+  justify-content: space-between;
+  background-color: #4a4a4a;
+}
+
+.form-first {
+  display: flex;
+  align-items: center;
+}
+
+.form-input {
+  margin: 5px;
+}
+
+.form-input label {
+  display: block;
+  margin-bottom: 5px;
   font-size: 20px;
-  color: #2c3e50;
-  width: 100%;
+  color: #b9b9bb;
+}
+.form input {
+  font-size: 20px;
+  width: 90%;
   border: none;
   outline: none;
-  border-bottom: 1px solid #2c3e50;
   padding: 5px;
+  border-radius: 10px;
+  border: 1px solid orange;
+}
+
+.form button {
+  background-color: orange;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.todo-box {
+  margin: 10 auto;
+  width: 100%;
+}
+
+.todo-box ul {
+  margin: 10 auto;
+  width: 100%;
+  padding: 0;
+}
+
+.todo-box li {
+  margin: 10px auto;
+  width: 80%;
+  padding: 10px;
 }
 
 .task {
-  background-color: #34495e;
+  color: #fff;
+  background-color: #4a4a4a;
+  border-radius: 4px;
   padding: 15px;
-  margin: 5px;
+  margin: 10px;
   overflow-x: hidden;
-  border-radius: 5px;
   cursor: pointer;
 }
-
-.task span {
-  color: #FFFFFF;
+.task-inside {
+  display: flex;
+  justify-content: space-between;
 }
 
-.icon {
-  float: right;
-  margin-right: 20px;
+.task-core button {
+  margin: 10px;
+  padding: 10px;
+}
+
+.task-core h1 {
+  color: #fd9814;
+  font-size: 30px;
+  margin: 0px;
+}
+
+.task-core p {
+  font-size: 15px;
 }
 
 article {
   display: grid;
 }
 
-.edit-todo {
-  width: 85%;
-  font-size: 16px;
-  color: #FFFFFF;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #FFFFFF;
-}
-
-.button {
-  margin: 0 10px;
-  padding: 10px;
-  font-size: 14px;
-  color: #6c6777;
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-  width: 100px;
-  border-radius: 5px;
-  margin-top: 15px;
-}
-
-.button.selected {
-  color: #FFF;
-  background-color: #6c6777;
-}
-
-.button.clear {
-  float: right;
-  color: #FFF;
-  background-color: #ee1630;
-  width: 170px;
+.task-core {
+  max-width: 74%;
 }

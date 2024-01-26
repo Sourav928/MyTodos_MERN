@@ -1,7 +1,8 @@
+//Header component
 const Header = () => {
   return (
     <header>
-      <h1>Activity Tracker</h1>
+      <h1>My Todos</h1>
     </header>
   );
 };

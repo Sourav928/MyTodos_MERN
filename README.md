@@ -1,5 +1,5 @@
 <h1 align = 'center'>
-   Activity-Tracker
+   MyTodos - MERN Stack Todo Application
 </h1>
 <div align = 'center'>
               
@@ -9,17 +9,37 @@
 
 </div>
 
-![activityTracker](https://github.com/Sourav928/MyQuotes/assets/76393038/ceb5983f-5a8a-495c-9293-e7a935badff5)
+![image](https://github.com/Sourav928/MyTodos-MERN/assets/76393038/76bb9dd4-87d9-4878-aaf9-651ad9ed3cd4)
 
- <h3>Description</h3>
- This is the repository for Activiy-Tracker app built using the powerful MERN (MongoDB, Express.js, React, Node.js) stack along with Redux, provides you with a seamless and efficient way to manage your tasks. .Easily keep track of your everyday activities with a customizable task management system, real-time updates, and an intuitive interface. Set priorities, keep things in order, and increase output with ease.
+This is the repository for MyTodos app built using the powerful MERN (MongoDB, Express.js, React, Node.js) stack along with Redux and Redux Thunk, provides you with a seamless and efficient way to manage your todos.
 
- <h3>Features</h3>
- <ul>
-   <li>Userfriendly interface</li>
-   <li>Realtime updates.</li>
-   <li>Data Security</li>
- </ul>
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Configuration](#configuration)
+4. [API Documentation](#api-documentation)
+
+## Introduction
+
+This is Todo application which can be used to track our daily task, build using MERN stack ,Redux Thunk and some other technologies.
+
+## Installation
+
+Install VS code or any IDE install nodejs and npm, create account on mongoDB atlas, Create react app using npm.
+
+## Configuration
+
+# Clone the repository
+
+git clone https://github.com/Sourav928/MyTodos-MERN.git
+
+# Install dependencies
+
+cd project-folder
+npm install
+Configuration
+Document any environment variables or configuration files that need to be set up before running the project.
 
  <h3>Libraries / Dependencies</h3>
  <ul>
@@ -31,6 +51,9 @@
     <li>axios: A promise-based HTTP client for making requests to the backend API.</li>
     <li>express: As mentioned above, used for building the server.</li>
     <li>dotenv: A zero-dependency module that loads environment variables from a .env file into process.env.</li>
+   <li>redux:This line imports two essential functions from the Redux library: createStore and applyMiddleware.</li>
+   <li>redux-thunk:Redux Thunk is middleware for Redux that allows you to write action creators that return a function instead of an action object.</li>
+   <li>redux-dev-Tools:Redux DevTools Extension is a browser extension that allows you to inspect and debug your Redux state and actions.</li>
  </ul>
 
  <h3>Getting Started </h3>
@@ -47,6 +70,58 @@ npm install dependencies
 # Then simply start your app
 npm start
 ```
+
+## API Documentation
+
+<b>Base URL: </b> 'https://localhost:300/'
+
+<b>Endpoint 1: </b> <br>
+URL: /todos <br>
+Method: POST<br>
+Description: Posting the todo to the database.<br>
+Query Parameters: NA<br>
+Response:<br>
+200 OK: Description of successful response.<br>
+500 Internal Server Error: Description of error response.<br>
+
+<b>Endpoint 2: </b> <br>
+URL: /todos<br>
+Method: GET<br>
+Description: Getting all the todos from the database.<br>
+Query Parameters: NA<br>
+Response:<br>
+200 OK: Description of successful response.<br>
+500 Internal Server Error: Description of error response.<br>
+
+<b>Endpoint 3: </b> <br>
+URL: /todos/:id<br>
+Method: GET<br>
+Description: To toggle the state of the element<br>
+Parameters:<br>
+id: Description of the resource ID (type, required).<br>
+Response:<br>
+200 OK: Description of successful response.<br>
+500 Internal Server Error: Description of error response.<br>
+
+<b>Endpoint 4: </b> <br>
+URL: /todos/:id<br>
+Method: DELETE<br>
+Description: To delete the todo from the database.<br>
+Parameters:<br>
+id: Description of the resource ID (type, required).<br>
+Response:<br>
+200 OK: Description of successful response.<br>
+500 Internal Server Error: Description of error response.<br>
+
+<b>Endpoint 5: </b> <br>
+URL: /todos/:id<br>
+Method: PUT<br>
+Description: To update the todo from the database.<br>
+Parameters:<br>
+id: Description of the resource ID (type, required).<br>
+Response:<br>
+200 OK: Description of successful response.<br>
+500 Internal Server Error: Description of error response.<br>
 
 ## Build With
 
