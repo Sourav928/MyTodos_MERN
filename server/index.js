@@ -21,9 +21,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Route api
 app.use("/", Routes);
 
+app.use(express.static(path.resolve(__dirname, "client", "build")));
 //prod
 app.get("/", (req, res) => {
-  app.use(express.static(path.resolve(__dirname, "client", "build")));
   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 });
 
