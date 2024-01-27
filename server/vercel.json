@@ -13,6 +13,8 @@
     }
   ],
   "functions": {
-    "timeout": 60
+    "api/*.js": {
+      "maxDuration": 60
+    }
   }
 }
