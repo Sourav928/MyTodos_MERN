@@ -9,7 +9,8 @@
 
 </div>
 
-![image](https://github.com/Sourav928/MyTodos-MERN/assets/76393038/76bb9dd4-87d9-4878-aaf9-651ad9ed3cd4)
+![image](https://github.com/Sourav928/Maadhyam/assets/76393038/de301d06-7131-420e-a18d-fdd69b6ea463)
+
 
 This is the repository for MyTodos app built using the powerful MERN (MongoDB, Express.js, React, Node.js) stack along with Redux and Redux Thunk, provides you with a seamless and efficient way to manage your todos.
 
