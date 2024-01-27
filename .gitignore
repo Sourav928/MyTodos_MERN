@@ -1,8 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-client/node_modules
+server/client/node_modules
 server/node_modules
+client/node_modules
 /.pnp
 .pnp.js
 server/vercel.json     
@@ -10,12 +11,12 @@ server/vercel.json
 /coverage
 
 # production
-/build
-client/package-lock.json
-server/package-lock.json
+
 
 # misc
 server/.env
+client/package-lock.json
+server/package-lock.json
 
 .DS_Store
 .env.local

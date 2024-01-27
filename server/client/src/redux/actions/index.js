@@ -8,7 +8,7 @@ import {
   DELETE_TODO,
 } from "./type";
 
-const API_URL = "http://localhost:8000";
+const API_URL = `${window.location.origin}`;
 
 export const addNewTodo = (data) => async (dispatch) => {
   try {
